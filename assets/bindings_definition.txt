@@ -1,0 +1,26 @@
+def q(InterchangeLoaderQ) qu(APP.INTERCHANGE.LOADER.MSG.POC)
+def q(ParserQ) qu(APP.PARSER.MSG.POC)
+def q(XPELInvokerQ) qu(APP.BPEL.INVOKER.MSG.POC)
+def q(DewarehousingQ) qu(APP.DEWAREHOUSING.MSG.POC)
+def q(OutgoingInitiationQ) qu(APP.OUTGOING.INITIATION.MSG.POC)
+def q(DataImportQ) qu(APP.DATA.IMPORT.MSG.POC)
+def q(InterfacingHeraldQ) qu(APP.INTERFACING.HERALD.MSG.POC)
+def q(InterfacingReplyQ) qu(APP.INTERFACING.REPLY.MSG.POC)
+def q(InterfacingRequestQ) qu(APP.INTERFACING.REQUEST.MSG.POC)
+def q(NotificationQ) qu(APP.NOTIFICATION.MSG.POC)
+def q(SenderQ) qu(APP.SENDER.MSG.POC)
+def q(SysInterchangeLoaderQ) qu(EAPP2APP.SCTFILE.REQ.POC)
+def q(SysInterchangeLoaderACKQ) qu(APP2SCIFI.SCTFILE.REP)
+def q(SchedulerInitiationQ) qu(AX42APP.TRIGGER.REQ.POC)
+def q(SchedulerInitiationACKQ) qu(APP2AX4.TRIGGER.REP.POC)
+def q(CmdRequestQ) qu(APP2CUST.CUSTDATA.REQ) TC(MQ)
+def q(CmdReplyQ) qu(CUST2APP.CUSTDATA.REP.POC) TC(MQ)
+def q(NbsRequestQ) qu(APP2ACC.BOOKING.REQ) TC(MQ)
+def q(NbsReplyQ) qu(ACC2APP.BOOKING.REP.POC)  TC(MQ)
+def q(NbsSenderQ) qu(APP.NBS.SENDER.MSG.POC)
+def q(NbsProcessorQ) qu(APP.NBS.PROCESSOR.MSG.POC)
+
+def xaqcf(QCF) transport(CLIENT) channel(CLIENTS.EX) host(mqsrv.example.com) port(1414) qmgr(CMQM)
+
+end
+
