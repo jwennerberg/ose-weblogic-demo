@@ -49,7 +49,7 @@ cd('/Servers/' + msname)
 
 # Default Channel for ManagedServer
 # ---------------------------------
-cmo.setListenAddress(msinternal)
+cmo.setListenAddress('0.0.0.0')
 cmo.setListenPort(int(msport))
 cmo.setListenPortEnabled(true)
 cmo.setExternalDNSName(mshost)
