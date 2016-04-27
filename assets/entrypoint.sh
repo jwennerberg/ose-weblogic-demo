@@ -44,7 +44,7 @@ $WLST /u01/oracle/create-managed-server.py
 
 pushd $DOMAIN_HOME
 echo "# Start ManagedServer" > $MGDSRV_LOG
-nohup ./bin/startManagedWebLogic.sh > $MGDSRV_LOG &
+nohup ./bin/startManagedWebLogic.sh $MS_NAME http://${ADMIN_HOST}:${ADMIN_PORT} > $MGDSRV_LOG &
 tail -f $MGDSRV_LOG | grep -m 1 "Server started in RUNNING mode" | { cat; echo >> $MGDSRV_LOG ; }
 popd
 
