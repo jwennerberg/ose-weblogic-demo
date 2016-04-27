@@ -48,5 +48,8 @@ nohup ./bin/startManagedWebLogic.sh $MS_NAME http://${ADMIN_HOST}:${ADMIN_PORT} 
 tail -f $MGDSRV_LOG | grep -m 1 "Server started in RUNNING mode" | { cat; echo >> $MGDSRV_LOG ; }
 popd
 
+# Deploy webapp
+$WLST /u01/oracle/deploy-webapp.py
+
 # Print log
 tail -f ${DOMAIN_HOME}/servers/${MS_NAME}/logs/${MS_NAME}.log
