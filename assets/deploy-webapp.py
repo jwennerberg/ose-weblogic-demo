@@ -33,15 +33,11 @@ artifact_name = os.environ.get('ARTIFACT_NAME', 'shoppingcart.war')
 # ==========================
 connect(username, password, 't3://' + adminhost + ':' + adminport)
 
-editMode()
-
 print 'Deploying....'
 deploy(webapp_name, artifact_path + '/' + artifact_name, targets=target_name)
 print '....deployed. Starting....'
 startApplication(webapp_name)
 print '....started'
 
-editActivate()
-
-diconnect()
+disconnect()
 exit()
